@@ -1,5 +1,6 @@
 {
-  "name": "homework":, "https://kibeshev87.github.io/homework",
+  "name": "homework",
+  "homepage": "https://kibeshev87.github.io/homework",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
