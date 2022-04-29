@@ -28,9 +28,9 @@ function Roads() {
 
                 <Route path='/juniorPlus' element={<JuniorPlus/>}/>
                 {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
-{/*
-                <Route element={<Error404/>}/>
-*/}
+
+                <Route path='/*' element={<Error404/>}/>
+
 
             </Routes>
         </div>

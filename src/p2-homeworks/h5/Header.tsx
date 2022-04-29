@@ -1,4 +1,5 @@
 import React from 'react'
+import style from './header.module.css'
 import PreJunior from "./preJunior/PreJunior";
 import {Junior} from "./junior/Junior";
 import {JuniorPlus} from "./juniorPlus/JuniorPlus";
@@ -7,10 +8,18 @@ import {Link} from "react-router-dom";
 
 function Header() {
     return (
-        <div>
-            <Link to={'/preJunior'}>PreJunior</Link>
-            <Link to={'/junior'}>Junior</Link>
-            <Link to={'/juniorPlus'}>JuniorPlus</Link>
+        <div className={style.event}>
+            <div>
+                <Link to={'/preJunior'}>PreJunior</Link>
+            </div>
+
+            <div>
+                <Link to={'/junior'}>Junior</Link>
+            </div>
+
+            <div>
+                <Link to={'/juniorPlus'}>JuniorPlus</Link>
+            </div>
             {/*<Error404/>*/}
         </div>
     )
