@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import {BrowserRouter, HashRouter} from "react-router-dom";
-import Roads from "./Roads";
+import {Roads} from "./Roads";
 
 function HW5() {
     return (
