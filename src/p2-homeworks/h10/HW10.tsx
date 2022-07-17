@@ -1,12 +1,20 @@
 import React from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import {useDispatch, useSelector} from "react-redux";
+import {AppStoreType} from "./bll/store";
+import {loadingAC} from "./bll/loadingReducer";
 
 function HW10() {
+    const isLoading = useSelector<AppStoreType>(state => state.loading.isLoading)
+    const dispatch = useDispatch()
     // useSelector, useDispatch
-    const loading = false
 
     const setLoading = () => {
+        dispatch(loadingAC(true))
         // dispatch
+        setTimeout(() => {
+            dispatch(loadingAC(false))
+        }, 3000)
         // setTimeout
         console.log('loading...')
     };
@@ -17,7 +25,7 @@ function HW10() {
             homeworks 10
 
             {/*should work (должно работать)*/}
-            {loading
+            {isLoading
                 ? (
                     <div>крутилка...</div>
                 ) : (
